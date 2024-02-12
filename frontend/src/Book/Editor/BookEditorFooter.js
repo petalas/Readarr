@@ -72,6 +72,11 @@ class BookEditorFooter extends Component {
     this.setState({ isDeleteBookModalOpen: false });
   };
 
+  onRenameButtonBlicked = (bookIds) => {
+    console.log('TODO: rename selected');
+    console.log(bookIds);
+  };
+
   //
   // Render
 
@@ -109,6 +114,10 @@ class BookEditorFooter extends Component {
             isDisabled={!selectedCount}
             onChange={this.onInputChange}
           />
+        </div>
+
+        <div>
+          <button onClick={() => this.onRenameButtonBlicked(bookIds)}>RENAME</button>
         </div>
 
         <div className={styles.buttonContainer}>
